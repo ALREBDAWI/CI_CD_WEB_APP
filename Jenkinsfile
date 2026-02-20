@@ -28,13 +28,12 @@ pipeline {
             steps {
                 echo 'Starting SonarCloud Analysis...'
                 withCredentials([string(credentialsId: "${SONAR_TOKEN_ID}", variable: 'SONAR_VAR')]) {
-                    sh """
-                    ./mvnw sonar:sonar \
+                    sh "./mvnw sonar:sonar \
                     -Dsonar.token=${SONAR_VAR} \
                     -Dsonar.host.url=https://sonarcloud.io \
                     -Dsonar.organization=alrebdawi \
-                    -Dsonar.projectKey=ALREBDAWI_CI_CD_WEB_APP
-                    """
+                    -Dsonar.projectKey=ALREBDAWI_CI_CD_WEB_APP"
+                   
                 }
             }
 }
