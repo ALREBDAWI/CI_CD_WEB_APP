@@ -6,7 +6,7 @@ pipeline {
         SONAR_TOKEN_ID      = 'sonar_token'
         TEAMS_WEBHOOK_ID    = 'teams_webhook'
 
-        DOCKER_USER = 'reb'
+        DOCKER_USER = 'goodreb'
         APP_NAME    = 'CI_CD_WEB_APP'
     }
 
