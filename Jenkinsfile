@@ -7,7 +7,7 @@ pipeline {
         TEAMS_WEBHOOK_ID    = 'teams_webhook'
 
         DOCKER_USER = 'goodreb'
-        APP_NAME    = 'CI_CD_WEB_APP'
+        APP_NAME    = 'ci_cd_web_app'
     }
 
     stages {
