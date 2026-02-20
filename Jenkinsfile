@@ -55,7 +55,7 @@ pipeline {
             steps {
                 echo 'Deploying App Container...'
                 sh "docker rm -f ${APP_NAME} || true"
-                sh "docker run -d --name ${APP_NAME} -p 8080:8080 ${DOCKER_USER}/${APP_NAME}:latest"
+                sh "docker run -d --name ${APP_NAME} -p 9001:8080 ${DOCKER_USER}/${APP_NAME}:latest"
             }
         }
     }
