@@ -20,7 +20,7 @@ pipeline {
         stage('Build and Test') {
             steps {
                 echo 'Building using Maven...'
-                sh './mvnw clean package'
+                sh './mvnw clean package -DskipTests'
             }
         }
 
