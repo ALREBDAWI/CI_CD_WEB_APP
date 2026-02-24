@@ -55,7 +55,7 @@ pipeline {
             steps {
                 echo 'Deploying App Container...'
                 sh "docker rm -f ${APP_NAME} || true"
-                sh "docker run -d --name ${APP_NAME} -p 9001:8081 ${DOCKER_USER}/${APP_NAME}:latest"
+                sh "docker run -d --name ${APP_NAME} -p 9001:8081 -e API_URL=http://localhost:8081 ${DOCKER_USER}/${APP_NAME}:latest"
             }
         }
     }
